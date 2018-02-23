@@ -1,0 +1,19 @@
+{
+  "name": "inkling",
+  "version": "1.0.0",
+  "description": "inkling -- connecting artists to their clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeL501/inkling.git"
+  },
+  "author": "Inkling-UNHCodingBootcamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakeL501/inkling/issues"
+  },
+  "homepage": "https://github.com/JakeL501/inkling#readme"
+}
