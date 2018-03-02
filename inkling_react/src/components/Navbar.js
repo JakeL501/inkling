@@ -21,34 +21,33 @@ const Navbar = () => (
           Inkling
         </a>
         </div>
-{/* Collect the nav links, forms, and other content for toggling */}
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar navbar-nav">
                 <li class="active">
-                    <a href="#">About
+                    <a href="/">About
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">Your Next Tattoo</a>
+                    <a href="inkling-builder.html">Your Next Tattoo</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find a Skin
+                    <a href="inkling-hunter.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find a Skin
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">by Style</a>
+                            <a href="/">by Style</a>
                         </li>
                         <li>
-                            <a href="#">by Budget</a>
+                            <a href="/">by Budget</a>
                         </li>
                         <li>
-                            <a href="#">by Location</a>
+                            <a href="/">by Location</a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li>
-                            <a href="#">Tattoo Events</a>
+                            <a href="/">Tattoo Events</a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li>
@@ -60,30 +59,30 @@ const Navbar = () => (
                     <a href="#">Inkers.</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find an Artist
+                    <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find an Artist
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">by Style</a>
+                            <a href="/">by Style</a>
                         </li>
                         <li>
-                            <a href="#">by Cost</a>
+                            <a href="/">by Cost</a>
                         </li>
                         <li>
-                            <a href="#">by Shop Location</a>
+                            <a href="/">by Shop Location</a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li>
-                            <a href="#">Browse All</a>
+                            <a href="/">Browse All</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
-        {/* <!-- /.navbar-collapse --> */}
+
     </div>
-    {/* <!-- /.container-fluid --> */}
+
 </nav>
 );
 
