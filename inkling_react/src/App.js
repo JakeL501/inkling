@@ -12,7 +12,7 @@ import SignIn from "./components/SignIn";
 const App = () => (
   <div className="container">
     <Navbar />
-    <SignIn />
+    {/* <SignIn /> */}
     <Modal />
     <Jumbotron />
     <Carousel />
