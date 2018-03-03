@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var ig = require('instagram-node').instagram();
 var accessToken = '7120141032.1677ed0.f0506cabd0554bb99892f635b7db49f6'; 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 //location of our static files(css,js,etc..)
 app.use(express.static(__dirname + '/views'));
