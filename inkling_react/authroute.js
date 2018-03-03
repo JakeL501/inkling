@@ -1,3 +1,6 @@
+//views routes go to .ejs extensions currently, once pages are built change accordingly
+
+
 module.exports = function(app, passport) {
 
     // =====================================
@@ -63,3 +66,11 @@ function isLoggedIn(req, res, next) {
     // if they aren't redirect them to the home page
     res.redirect('/');
 }
+
+
+// process the login form
+app.post('/login', passport.authenticate('local-login', {
+    successRedirect : '/profile', // redirect to the secure profile section
+    failureRedirect : '/login', // redirect back to the signup page if there is an error
+    failureFlash : true // allow flash messages
+}));
