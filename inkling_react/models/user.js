@@ -11,6 +11,7 @@ var userSchema = mongoose.Schema({
         password     : String,
     },
 
+    
 });
 
 // methods ======================
