@@ -1,0 +1,24 @@
+///////////////////////////////////////////////////////////////////////////////////////
+//                             Dependencies & Variables                              //
+///////////////////////////////////////////////////////////////////////////////////////
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+///////////////////////////////////////////////////////////////////////////////////////
+//                                      Schema                                       //
+///////////////////////////////////////////////////////////////////////////////////////
+// Define and assign the schema for an ink request
+const inkReqSchema = new Schema({
+  userName: { type: String, required: true },
+  email: { type: String, required: true },
+  pic: { type: String, required: true },
+  snippet: { type: Boolean, required: true, default:false },
+});
+
+// Make a copy of the above ink request schema and assign it to a variable
+const InkRequest = mongoose.model("InkRequest", inkRequestSchema);
+
+///////////////////////////////////////////////////////////////////////////////////////
+//                                     Exports                                       //
+///////////////////////////////////////////////////////////////////////////////////////
+module.exports = InkRequest;
