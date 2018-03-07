@@ -8,6 +8,8 @@ import InkBuild from "./components/Ink-build/Ink-build";
 import InkStyles from "./components/Ink-Styles/Ink-Styles";
 import Collapse from "./components/Collapse/Collapse";
 import SignIn from "./components/SignIn/SignIn";
+import BuiltInk from "./components/Built-Ink/Built-Ink";
+import Profile from "./components/Profile/Profile";
 
 const App = () => (
   <div className="container">
@@ -20,6 +22,8 @@ const App = () => (
     <InkBuild />
     <InkStyles />
     <Collapse />
+    <BuiltInk />
+    <Profile />
   </div>
 );
 
