@@ -7,7 +7,7 @@ const apiRoutes = require("./api");
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../inkling_react/public/index.html"));
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 module.exports = router;
