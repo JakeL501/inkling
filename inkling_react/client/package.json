@@ -5,11 +5,9 @@
   "dependencies": {
     "express": "^4.16.2",
     "node-instagram": "^4.1.0",
-    "npm": "^5.7.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1",
-    "watchman": "^1.0.0"
+    "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
