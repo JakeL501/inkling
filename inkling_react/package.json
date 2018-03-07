@@ -25,15 +25,14 @@
   "bugs": {
     "url": "https://github.com/JakeL501/inkling/issues"
   },
-  
   "homepage": "https://github.com/JakeL501/inkling#readme",
-
   "devDependencies": {
-    "concurrently": "^3.5.0",
+    "concurrently": "^3.5.1",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "instagram-node": "^0.5.8",
+    "yarn": "^1.5.1"
   }
 }
-
