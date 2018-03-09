@@ -7,14 +7,14 @@ const Modal = () => (
     class="btn btn-primary"
     data-toggle="modal"
     data-target="#inkling-lisu">
-    Log In
+    Sign Up
     </button>
 
 <div class="modal fade" id="inkling-lisu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="inklingBuilder">Modal title</h5>
+                    <h5 class="modal-title" id="inklingBuilder">Become Part of Inkling</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -28,8 +28,8 @@ const Modal = () => (
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></input>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <label for="formControlSelect1">Example select</label>
+                        <select class="form-control" id="formControlSelect1">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -38,8 +38,8 @@ const Modal = () => (
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlSelect2">Example multiple select</label>
-                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <label for="formControlSelect2">Example multiple select</label>
+                        <select multiple class="form-control" id="formControlSelect2">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -79,10 +79,10 @@ const Modal = () => (
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
             </div>
-        </div>
-                    </div>
+      
+                    
                     <div class="row">
-                    <div class="input-group">
+                    <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="">First and last name</span>
                     </div>
@@ -108,14 +108,16 @@ const Modal = () => (
                     <div class="row">
                         
                     </div>
+                    </div>
                     <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>    
 );
 
 export default Modal;
