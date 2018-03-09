@@ -1,18 +1,52 @@
 {
   "name": "inkling",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "express": "^4.16.2",
     "node-instagram": "^4.1.0",
+    "npm": "^5.7.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "watchman": "^1.0.0"
   },
+
+  "version": "1.0.0",
+  "description": "Inkling is an app that connects a tattoo artist with a potential clients. This will hopefully be a useful tool to downsize the amount of \"bad\" tattoos.",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeL501/inkling.git"
+  },
+  "keywords": [
+    "tattoos",
+    "new",
+    "ink",
+    "app"
+  ],
+  "author": "Inkling Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JakeL501/inkling/issues"
+  },
+  "homepage": "https://github.com/JakeL501/inkling#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "instagram-node": "^0.5.8",
+    "yarn": "^1.5.1"
+  
   }
 }
