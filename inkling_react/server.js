@@ -5,13 +5,14 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
+const PORT = process.env.PORT || 3001;
 
 //instagram
 const ig = require('instagram-node').instagram();
 const accessToken = '7120141032.1677ed0.f0506cabd0554bb99892f635b7db49f6';
 
-//express connection
-const PORT = process.env.PORT || 3001;
+// //express connection
+// const PORT = process.env.PORT || 3000;
 
 // Configure body parser for AJAX requests and axios
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,6 +25,7 @@ app.use(routes);
 
 // INSTAGRAM API SERVER STUFF ---- prob API utils later
  ig.use({
+    client_id: 'df227a4bb2a34fceae540911709167b1',
     client_secret: '7e4598b2c77d48dd9616edd7bd7ca971'
 });
 
@@ -55,7 +57,7 @@ app.get('/', function (req, res) {
         if(err) res.json(err);
      // pass the json file gotten to our ejs template 
         // res.send({instagram : result})
-        res.render('pages/index', { instagram : result });
+        res.render('../views/pages/index.ejs', { instagram : result });
     });
    
 });
