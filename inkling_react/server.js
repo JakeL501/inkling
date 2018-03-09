@@ -5,7 +5,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 //instagram
 const ig = require('instagram-node').instagram();
@@ -57,7 +57,7 @@ app.get('/', function (req, res) {
         if(err) res.json(err);
      // pass the json file gotten to our ejs template 
         // res.send({instagram : result})
-        res.render('/views/index.ejs', { instagram : result });
+        res.render('../views/pages/index.ejs', { instagram : result });
     });
    
 });
