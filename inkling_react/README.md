@@ -1,4 +1,5 @@
 Inkling
+
 With Inkling our goal is to connect a potential client with a tattoo artist. The problems we want to solve are as follows:
  - limit the amount of poorly chosen tattoo's, 
  - allow clients to think more about what tattoo they want as well as get feedback from artists,
