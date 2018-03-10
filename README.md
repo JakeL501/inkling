@@ -10,7 +10,7 @@ Getting Started:
 
 First clone the repository locally using "git clone" in the git bash terminal and adding the link https://github.com/JakeL501/inkling.git.
 
-After this cd into inkling then inkling_react and do an npm install. When done cd into client and do the same. After all the npm installs are complete cd out of client back to inkling_react and run yarn start. 
+After this cd into inkling and do an npm install. When done cd into client and do the same. After npm installs are complete cd out of client back to inkling and run yarn start. 
 
 React should automatically open your localhost on your web browser.
 
