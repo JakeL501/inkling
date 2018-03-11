@@ -9,7 +9,11 @@ const PORT = process.env.PORT || 3001;
 
 //instagram
 const ig = require('instagram-node').instagram();
-const accessToken = '7120141032.1677ed0.f0506cabd0554bb99892f635b7db49f6';
+var accessToken = '7229099483.1677ed0.8721a2a4706247f5a302ae9ed22e38bf'; 
+
+//tag search 
+"https://api.instagram.com/v1/tags/search?q="//+hashTag+
+"&access_token="+accessToken;
 
 // //express connection
 // const PORT = process.env.PORT || 3000;
@@ -24,9 +28,9 @@ app.use(routes);
  
 
 // INSTAGRAM API SERVER STUFF ---- prob API utils later
- ig.use({
-    client_id: 'df227a4bb2a34fceae540911709167b1',
-    client_secret: '7e4598b2c77d48dd9616edd7bd7ca971'
+ig.use({
+    client_id: '896e848e88374638bcc9d7c05daf16d4',
+    client_secret: 'b324a1ce02954cbb80e7062a8505814d'
 });
 
 //the redirect uri we set when registering our application
