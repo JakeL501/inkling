@@ -10,18 +10,23 @@ import Collapse from "./components/Collapse/Collapse";
 import SignIn from "./components/SignIn/SignIn";
 import BuiltInk from "./components/Built-Ink/Built-Ink";
 import Profile from "./components/Profile/Profile";
+import InkHuntBtn from "./components/InkHuntBtn/InkHuntBtn"
+
 
 const App = () => (
   <div className="container">
     <Navbar />
-    {/* <SignIn /> */}
-    <Modal />
+    <Collapse />
     <Jumbotron />
+    
+    <InkHuntBtn />
+    {/* <SignIn /> */}
+    <p>    </p>
+    <Modal />
     <Carousel />
     <Panel />
     <InkBuild />
     <InkStyles />
-    <Collapse />
     <BuiltInk />
     <Profile />
   </div>

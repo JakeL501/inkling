@@ -4,7 +4,7 @@ const Jumbotron = () => (
   <div className="jumbotron">
     <h1>Inkling</h1>
     <p>
-      Inkling
+    <img src="http://via.placeholder.com/350x150" alt="Inkling Logo"></img>
     </p>
   </div>
 );
