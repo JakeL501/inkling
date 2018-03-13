@@ -8,17 +8,46 @@ const Schema = mongoose.Schema;
 //                                      Schema                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
 // Define and assign the schema for an ink request
-const artistSampleSchema = new Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  profile: { type: String, required: true },
-  artist: { type: Boolean, required: true, default:false }
+const inkerSampleSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+    required: "Name is Required",
+    validate: [
+      function (input) {
+        return input.length >= 1;
+      },
+      "String should be longer."
+    ]
+  },
+  email: {
+    type: String,
+    required: true,
+    required: "Email is Required",
+    validate: [validateEmail, 'Please fill a valid email address'],
+    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+  },
+  styles: {
+    type: Array,
+    required: true
+  },
+  website: {
+    type: String
+  },
+  img: {
+    data: Buffer,
+    contentType: String
+  },
+  description: {
+    type: String
+  },
 });
 
 // Make a copy of the above ink request schema and assign it to a variable
-const ArtistSample = mongoose.model("ArtistSample", artistSampleSchema);
+const InkerSample = mongoose.model("InkerSample", inkerSampleSchema);
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //                                     Exports                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
-module.exports = ArtistSample;
+module.exports = InkerSample;
