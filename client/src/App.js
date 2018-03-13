@@ -14,16 +14,26 @@ import Profile from "./components/Profile/Profile";
 const App = () => (
   <div className="container">
     <Navbar />
+    <br></br>
+    <Profile />
+    <br></br>
+    <BuiltInk />
+    <br></br>
     {/* <SignIn /> */}
     <Modal />
+    <br></br>
     <Jumbotron />
-    <Carousel />
+    <br></br>
     <Panel />
-    <InkBuild />
-    <InkStyles />
+    <br></br>
     <Collapse />
-    <BuiltInk />
-    <Profile />
+    <br></br>
+    <InkBuild />
+    <br></br>
+    <Carousel />
+    <br></br>
+    <InkStyles />
+    
   </div>
 );
 

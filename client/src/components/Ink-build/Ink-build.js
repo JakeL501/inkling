@@ -4,10 +4,10 @@ const InkBuild = () => (
     <div className="container-fluid">
     <button 
     type="button"
-    class="btn btn-primary"
+    class="btn btn-primary btn-lg btn-block"
     data-toggle="modal"
     data-target="#inkling-lisu">
-    Build Ink
+    Build an Inkling!
     </button>
 
 <div class="modal fade" id="inkling-lisu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
