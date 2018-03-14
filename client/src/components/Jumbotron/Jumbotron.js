@@ -1,10 +1,11 @@
 import React from "react";
+// import Logo from "components/Jumbotron/logo01j.jpg";
 
 const Jumbotron = () => (
   <div className="jumbotron">
     <h1>Inkling</h1>
     <p>
-    <img src="http://via.placeholder.com/350x150" alt="Inkling Logo"></img>
+    {/* <img src= alt="Inkling Logo"></img> */}
     </p>
   </div>
 );
