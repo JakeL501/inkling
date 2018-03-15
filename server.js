@@ -4,6 +4,7 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const axios = require("axios");
 const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 
@@ -76,6 +77,8 @@ mongoose.connect(
 //     useMongoClient: true
 //   }
 );
+
+
 
 app.listen(PORT, function() {
     console.log(`🌎 ==> Server now on port ${PORT}!`);

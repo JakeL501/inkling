@@ -1,24 +1,31 @@
 import React, { Component } from "react";
-import api from "../utils/api";
-import Panel from "../components/Panel";
-import Footer from "../components/Footer";
-import Jumbotron from "../components/Jumbotron";
-import Navbar from "../components/Navbar";
+import api from "../../utils/api";
+import Panel from "../../components/Panel";
+import Footer from "../../components/Footer";
+import Jumbotron from "../../components/Jumbotron";
+import Navbar from "../../components/Navbar";
+
+import DeleteBtn from "../../components/DeleteBtn";
+import SaveBtn from "../../components/SaveBtn";
+import { Col, Row, Container } from "../../components/Grid";
+import { List, ListItem } from "../../components/List";
+import { Input, TextArea, FormBtn } from "../../components/Form";
+
 // import { Input } from "client/src/components/Form";
 
-class Client extends Component {
+class Artist extends Component {
     state ={
-        clientProfileInfo: [],
+        artistProfileInfo: [],
     };
 
     componentDidMount() {
-        this.loadClient();
+        this.loadArtist();
     }
 
-    loadClient = () => {
-        api.getClient()
+    loadArtist = () => {
+        api.getArtist()
         .then(res =>
-            this.setState({clientProfileInfo: res.data})
+            this.setState({artistProfileInfo: res.data})
         )
         .catch(err => console.log(err));
     };
@@ -86,4 +93,4 @@ class Client extends Component {
       }
     }
     
-    export default Books;
+    export default Artist;

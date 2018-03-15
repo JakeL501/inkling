@@ -6,10 +6,10 @@ export default {
         return axios.get("/api/inkerProfile/" + id);
     },
 };
-export default {
-    // Gets the book with the given id
-    getClient: function (id) {
-        return axios.get("/api/skinProfile/" + id);
-    },
-};
+// export default {
+//     // Gets the book with the given id
+//     getClient: function (id) {
+//         return axios.get("/api/skinProfile/" + id);
+//     },
+// };
 

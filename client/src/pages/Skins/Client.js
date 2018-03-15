@@ -6,19 +6,19 @@ import Jumbotron from "../components/Jumbotron";
 import Navbar from "../components/Navbar";
 // import { Input } from "client/src/components/Form";
 
-class Artist extends Component {
+class Client extends Component {
     state ={
-        artistProfileInfo: [],
+        clientProfileInfo: [],
     };
 
     componentDidMount() {
-        this.loadArtist();
+        this.loadClient();
     }
 
-    loadArtist = () => {
-        api.getArtist()
+    loadClient = () => {
+        api.getClient()
         .then(res =>
-            this.setState({artistProfileInfo: res.data})
+            this.setState({clientProfileInfo: res.data})
         )
         .catch(err => console.log(err));
     };
@@ -28,7 +28,7 @@ class Artist extends Component {
             <Row>
               <Col size="md-6">
                 <Jumbotron>
-                  <h1>What Books Should I Read?</h1>
+                  <h1>Inkspired by:</h1>
                 </Jumbotron>
                 <form>
                   <Input
@@ -53,13 +53,13 @@ class Artist extends Component {
                     disabled={!(this.state.author && this.state.title)}
                     onClick={this.handleFormSubmit}
                   >
-                    Submit Book
+                    Build an Inkling.
                   </FormBtn>
                 </form>
               </Col>
               <Col size="md-6 sm-12">
                 <Jumbotron>
-                  <h1>Books On My List</h1>
+                  <h1>Inklings</h1>
                 </Jumbotron>
                 {this.state.books.length ? (
                   <List>

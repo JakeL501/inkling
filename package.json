@@ -4,11 +4,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "instagram-node": "^0.5.8",
-<<<<<<< HEAD
-    "mongoose": "^5.0.9",
-=======
     "mongoose": "^5.0.10",
->>>>>>> master
     "node-instagram": "^4.1.0",
     "npm": "^5.7.1",
     "react": "^16.2.0",
