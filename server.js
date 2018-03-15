@@ -97,9 +97,9 @@ mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/inkling",
-  {
-    useMongoClient: true
-  }
+//   {
+//     useMongoClient: true
+//   }
 );
 
 app.listen(PORT, function() {

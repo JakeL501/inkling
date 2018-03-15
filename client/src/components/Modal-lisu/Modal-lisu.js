@@ -4,47 +4,51 @@ const Modal = () => (
     <div className="container-fluid">
     <button 
     type="button"
-    class="btn btn-primary"
+    class="btn btn-primary btn-lg btn-block"
     data-toggle="modal"
     data-target="#inkling-lisu">
-    Log In
+    Sign Up
     </button>
 
 <div class="modal fade" id="inkling-lisu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="inklingBuilder">Modal title</h5>
+                    <h5 class="modal-title" id="inklingBuilder">Become Part of Inkling</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="newUser">
                     <div class="container-fluid">
                         <div class="row">
                         <form>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></input>
+                        <label for="userEmail">Email address</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="whatsyour.email@you-got-mail.com"></input>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <label for="userBioSelect">Main reason for joining Inkling?</label>
+                        <select class="form-control" id="userBioSelect">
+                            <option value="0">I just like loooking at tattoos...</option>
+                            <option value="1">I have been thinking about an inking.</option>
+                            <option value="2">I want some ink & I need it now.</option>
+                            <option value="3">I have an INKLING!</option>
+                            <option value="4">I want some skin.</option>
+                            <option value="5">I NEED some skins.</option>
+                            <option value="6">I came to show off my Inklings!</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlSelect2">Example multiple select</label>
-                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <label for="userBioOther">Some other reasons...?</label>
+                        <select multiple class="form-control" id="formControlSelect2">
+                            <option>I'm just looking at ink ideas.</option>
+                            <option>I have been thinking about getting skin art.</option>
+                            <option>I want some ink in my skin.</option>
+                            <option>I have an INKLING! ( Maybe even a few inklings... )</option>
+                            <option>I am a artist! I have a portfolio & have some tattoo experience. </option>
+                            <option>I am an artist! I have a portfolio & have tattoo'd in a professional setting.</option>
+                            <option>I came to show off my Inklings!</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -79,10 +83,10 @@ const Modal = () => (
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
             </div>
-        </div>
-                    </div>
+      
+                    
                     <div class="row">
-                    <div class="input-group">
+                    <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="">First and last name</span>
                     </div>
@@ -108,14 +112,16 @@ const Modal = () => (
                     <div class="row">
                         
                     </div>
+                    </div>
                     <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>    
 );
 
 export default Modal;
