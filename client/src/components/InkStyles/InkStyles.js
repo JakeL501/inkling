@@ -14,10 +14,8 @@ const InkStyles = () => (
             </a>
         </div>
         <div class="col-md-5">
-            <h3>Project One</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum
-                    at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque
-                    eveniet unde.</p>
+            <h3></h3>
+                <p></p>
             <a class="btn btn-primary" href="#">View Project</a>
             </div>
         </div>

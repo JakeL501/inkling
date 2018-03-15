@@ -1,68 +1,47 @@
-// INK-Styles
+// INKStyles
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import SaveBtn from "../../components/SaveBtn";
 import Jumbotron from "../../components/Jumbotron";
-import API from "../../utils/API";
+import InkStyles from "../../components/InkStyles";
+import API from "../../utils/api";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class inkStyles extends Component {
+class InklingStyles extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: "",
+    inklingStyles: [],
+    style: "",
+    img: "",
+    des: "",
 
-    articles: [],
-    savedArticles: [],
-    topic: "",
-    begin: "",
-    end: ""
+    // inkSpire: [],
+    // savedInkSpire: [],
+    // notes: "",
+    // begin: "",
+    // end: ""
   };
-
 
 
   componentDidMount() {
-    this.loadArticles();
+    this.loadInklingStyles();
   }
 
-  loadArticles = () => {
-    API.getSavedArticles()
+  loadInklingStyles = () => {
+    API.getInklingStyles()
       .then(res =>
-        this.setState({ savedArticles: res.data, title: "", date: ""})
+        this.setState({ inkStyles: res.data, style: "", img: "", des: "" })
       )
       .catch(err => console.log(err));
   };
 
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-      )
+  deleteInklingStyles = id => {
+    API.deleteInkStyles(id)
+      .then(res => this.loadInklingStyles())
       .catch(err => console.log(err));
   };
-
-  deleteArticle = id => {
-    API.deleteArticle(id)
-      .then(res => this.loadArticles())
-      .catch(err => console.log(err));
-  };
-
-
-  saveArticle = event => {
-    console.log("testing Article Save: " + this.state.data[event]);
-
-      API.saveArticle({
-        title: "testing"
-      })
-        .then(res => this.loadArticles())
-        .catch(err => console.log(err));
-    
-  };
-
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -71,114 +50,80 @@ class inkStyles extends Component {
     });
   };
 
-
-
   handleFormSubmit = event => {
     event.preventDefault();
-    API.getArticles(
-      this.state.topic,
-      this.state.begin,
-      this.state.end
-    )
-      .then(res => {
-        if (res.data.status === "error") {
-          throw new Error(res.data.message);
-        } else {
-          console.log(res.data.response);
-
-            this.setState({
-              articles: res.data.response.docs
-            })
-          }
-          console.log("Articles: " + this.state.articles)
-        }
-      )
-      .catch(err => this.setState({ error: err.message }));
-
+    if (this.state.style && this.state.author) {
+      API.saveInklingStyles({
+        style: this.state.style,
+        img: this.state.img,
+        des: this.state.des
+      })
+        .then(res => this.loadInklingStyles())
+        .catch(err => console.log(err));
+    }
   };
 
   render() {
-
-    // var articles = this.state.articles;
-
     return (
-      <div>
-        <Container fluid>
-          <Row>
-            <Col size="md-6">
-              <Jumbotron>
-                <h1>Search for Articles</h1>
-              </Jumbotron>
-              <form>
-                <Input
-                  value={this.state.topic}
-                  onChange={this.handleInputChange}
-                  name="topic"
-                  placeholder="Topic"
-                />
-                <Input
-                  value={this.state.begin}
-                  onChange={this.handleInputChange}
-                  name="begin"
-                  placeholder="Start Year"
-                />
-                <TextArea
-                  value={this.state.end}
-                  onChange={this.handleInputChange}
-                  name="end"
-                  placeholder="End Year"
-                />
-                <FormBtn
-                  // disabled={!(this.state.author && this.state.title)}
-                  onClick={this.handleFormSubmit}
-                >
-                  Article Search
+      <Container fluid>
+        <Row>
+          <Col size="md-6">
+            <Jumbotron>
+              <h1>Tattoo Styles</h1>
+            </Jumbotron>
+            {/* <form>
+              <Input
+                value={this.state.title}
+                onChange={this.handleInputChange}
+                name="style"
+                placeholder="Title (required)"
+              />
+              <Input
+                value={this.state.author}
+                onChange={this.handleInputChange}
+                name="author"
+                placeholder="Author (required)"
+              />
+              <TextArea
+                value={this.state.synopsis}
+                onChange={this.handleInputChange}
+                name="synopsis"
+                placeholder="Synopsis (Optional)"
+              />
+              <FormBtn
+                disabled={!(this.state.author && this.state.title)}
+                onClick={this.handleFormSubmit}
+              >
+                Submit Book
               </FormBtn>
-              </form>
-            </Col>
-            <Col size="md-6 sm-12">
-              <Jumbotron>
-                <h1>Saved Articles</h1>
-              </Jumbotron>
-              {this.state.savedArticles.length ? (
-                <List>
-                  {this.state.savedArticles.map(article => (
-                    <ListItem key={article._id}>
-                      {/* <Link to={"/books/" + book._id}> */}
-                        <strong>
-                          {article.title} by {article.date}
-                        </strong>
-                      {/* </Link> */}
-                      <DeleteBtn onClick={() => this.deleteArticle(article._id)} />
-                    </ListItem>
-                  ))}
-                </List>
-              ) : (
-                  <h3>No Results to Display</h3>
-                )}
-            </Col>
-          </Row>
-        </Container>
-        <Container fluid>
-          <Row>
-            <Col size="md-6">
-              <Jumbotron>
-                <h1>Article Search Results</h1>
-              </Jumbotron>
+            </form>
+             */}
+          </Col>
+          <Col size="md-6 sm-12">
+            <Jumbotron>
+              <h1>Tattoo Styles</h1>
+            </Jumbotron>
+            {this.state.inkStyles.length ? (
               <List>
-                  {this.state.articles.map(article => (
-                    <ListItem key={article}>
-                      {article.headline.main}
-                      <SaveBtn onClick={() => this.saveArticle()}/>
-                    </ListItem>
-                  ))}
-                </List>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+                {this.state.inkStyles.map(style => (
+                  <ListItem key={style._id}>
+                    <Link to={"/inkStyles/" + style._id}>
+                      <strong>
+                        {style.title} by {style.author}
+                      </strong>
+                    </Link>
+                    <DeleteBtn onClick={() => this.deleteInklingStyle(style._id)} />
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
 
-export default inkStyles;
+export default InkStyles;
