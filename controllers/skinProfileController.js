@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/skinProfile");
 
 // Defining methods for the skinProfileController
 module.exports = {

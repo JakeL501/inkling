@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/inkerSample");
 
 // Defining methods for the inkerSampleController
 module.exports = {

@@ -3,17 +3,16 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
-///////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 //                                      Schema                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
 // Define and assign the schema for an ink request
-const InkRequestSchema = new Schema({
+const InkerProfileSchema = new Schema({
   name: {
     type: String,
     required: true,
     trim: true,
-    required: "Name is Required",
+    required: "name is Required",
     validate: [
       function (input) {
         return input.length >= 1;
@@ -24,37 +23,28 @@ const InkRequestSchema = new Schema({
   email: {
     type: String,
     required: true,
-    required: "Email is Required",
-    validate: [validateEmail, 'Please fill a valid email address'],
-    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+  },
+  profile: {
+    type: String
   },
   styles: {
     type: Array,
     required: true
   },
-  location: {
-    type: Array,
-    required: true
-  },
-  price: {
-    type: Number,
-    required: true,
-    min: [25, 'Cannot be less than $25.00'],
-        max: 10000
-  },
-  img: {
-    data: Buffer,
-    contentType: String
-  },
-  description: {
+  website: {
     type: String
   },
+  artist: {
+    type: Boolean,
+    required: true,
+    default: true
+  }
 });
 
 // Make a copy of the above ink request schema and assign it to a variable
-const InkRequest = mongoose.model("InkRequest", InkRequestSchema);
+const InkerProfile = mongoose.model("InkerProfile", InkerProfileSchema);
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //                                     Exports                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
-module.exports = InkRequest;
+module.exports = InkerProfile;

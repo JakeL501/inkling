@@ -3,16 +3,17 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////
 //                                      Schema                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
 // Define and assign the schema for an ink request
-const InkerProfileSchema = new Schema({
+const inkerSampleSchema = new Schema({
   name: {
     type: String,
     required: true,
     trim: true,
-    required: "name is Required",
+    required: "Name is Required",
     validate: [
       function (input) {
         return input.length >= 1;
@@ -24,11 +25,7 @@ const InkerProfileSchema = new Schema({
     type: String,
     required: true,
     required: "Email is Required",
-    validate: [validateEmail, 'Please fill a valid email address'],
-    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
-  },
-  profile: {
-    type: String
+    
   },
   styles: {
     type: Array,
@@ -37,17 +34,19 @@ const InkerProfileSchema = new Schema({
   website: {
     type: String
   },
-  artist: {
-    type: Boolean,
-    required: true,
-    default: true
-  }
+  img: {
+    data: Buffer,
+    contentType: String
+  },
+  description: {
+    type: String
+  },
 });
 
 // Make a copy of the above ink request schema and assign it to a variable
-const InkerProfile = mongoose.model("InkerProfile", InkerProfileSchema);
+const InkerSample = mongoose.model("InkerSample", inkerSampleSchema);
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //                                     Exports                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
-module.exports = InkerProfile;
+module.exports = InkerSample;

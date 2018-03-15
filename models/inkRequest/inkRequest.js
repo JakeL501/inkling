@@ -8,7 +8,7 @@ const Schema = mongoose.Schema;
 //                                      Schema                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
 // Define and assign the schema for an ink request
-const inkerSampleSchema = new Schema({
+const InkRequestSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -25,15 +25,21 @@ const inkerSampleSchema = new Schema({
     type: String,
     required: true,
     required: "Email is Required",
-    validate: [validateEmail, 'Please fill a valid email address'],
-    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+    
   },
   styles: {
     type: Array,
     required: true
   },
-  website: {
-    type: String
+  location: {
+    type: Array,
+    required: true
+  },
+  price: {
+    type: Number,
+    required: true,
+    min: [25, 'Cannot be less than $25.00'],
+        max: 10000
   },
   img: {
     data: Buffer,
@@ -45,9 +51,9 @@ const inkerSampleSchema = new Schema({
 });
 
 // Make a copy of the above ink request schema and assign it to a variable
-const InkerSample = mongoose.model("InkerSample", inkerSampleSchema);
+const InkRequest = mongoose.model("InkRequest", InkRequestSchema);
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //                                     Exports                                       //
 ///////////////////////////////////////////////////////////////////////////////////////
-module.exports = InkerSample;
+module.exports = InkRequest;
