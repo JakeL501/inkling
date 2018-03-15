@@ -11,7 +11,17 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
     "watchman": "^1.0.0",
+    "instagram-node": "^0.5.8",
+    "yarn": "^1.5.1",
+    "passport" : "~0.3.2",
+    "passport-local" : "~1.0.0",
+    "connect-flash" : "~0.1.1",     
+    "bcrypt-nodejs" : "latest",
+    "cookie-parser": "~1.4.3",
+    "method-override": "~2.3.6",
+    "express-session": "~1.14.1"
     "yarn": "^1.5.1"
+
   },
   "version": "1.0.0",
   "description": "Inkling is an app that connects a tattoo artist with a potential clients. This will hopefully be a useful tool to downsize the amount of \"bad\" tattoos.",
