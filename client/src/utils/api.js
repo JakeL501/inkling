@@ -1,15 +1,51 @@
 import axios from "axios";
 
 export default {
-    // Gets the book with the given id
+    
     getArtist: function (id) {
         return axios.get("/api/inkerProfile/" + id);
     },
-};
-export default {
-    // Gets the book with the given id
-    getClient: function (id) {
+
+    getSkins: function (id) {
         return axios.get("/api/skinProfile/" + id);
     },
+
+    getInkRequest: function (id) {
+        return axios.get("/api/inkRequest/" + id);
+    },
+
+    // Gets all ink requests to populate inkRequest page
+    getInkRequest: function (id) {
+        return axios.get("/api/inkRequest/" + id);
+    },
+
+    getInkerSample: function (id) {
+        return axios.get("/api/inkerSample/" + id);
+    },
+
+    // Gets all inker amples to post to inkerSample
+    getInkerSample: function (id) {
+        return axios.get("/api/inkerSample/" + id);
+    },
+
+    saveArtist: function(id) {
+        return axios.post("/api/inkerProfile", id);
+    },
+
+    saveSkins: function(id) {
+        return axios.post("/api/skinProfile", id);
+    },
+
+    saveInkRequest: function(id) {
+        return axios.post("/api/inkRequest", id);
+    },
+
+    saveInkerSample: function(id) {
+        return axios.post("/api/inkerProfile", id);
+    },
+
+
+
 };
+
 

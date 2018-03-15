@@ -8,7 +8,7 @@ import InkBuild from "./components/Ink-build/Ink-build";
 import InkStyles from "./components/Ink-Styles/Ink-Styles";
 import Collapse from "./components/Collapse/Collapse";
 import SignIn from "./components/SignIn/SignIn";
-import BuiltInk from "./components/Built-Ink/Built-Ink";
+import BuiltInk from "./components/BuiltInk/BuiltInk";
 import Profile from "./components/Profile/Profile";
 
 const App = () => (

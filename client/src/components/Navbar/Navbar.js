@@ -24,7 +24,7 @@ const Navbar = () => (
         <nav class="nav d-flex justify-content-between">
           <a class="p-2 text-muted" href="/About">About</a>
           <a class="p-2 text-muted" href="/Build-Ink">Build Ink</a>
-          <a class="p-2 text-muted" href="/Inkspiration">Inkspiration</a>
+          <a class="p-2 text-muted" href="/inkRequests">Inkspiration</a>
           <a class="p-2 text-muted" href="/Inkers">Inkers</a>
           <a class="p-2 text-muted" href="/Skins">Skins</a>
           <a class="p-2 text-muted" href="/Styles">Styles</a>
