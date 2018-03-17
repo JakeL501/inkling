@@ -72,10 +72,6 @@ var redirectUri = 'http://localhost:3000/handleAuth';
 //         res.render('../views/pages/index.ejs', { instagram : result });
 //     });
    
-<<<<<<< HEAD
-// });
-///-------------------------------
-=======
 });
 
 ///------------------------------- user authentication
@@ -95,16 +91,15 @@ require('./routes/api/authroute.js')(app, passport); // load our routes and pass
 
 //------------------------------------
 
->>>>>>> 81fe6cb06845b3a514d2b3af07d884e09a39063f
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/inkling",
-//   {
-//     useMongoClient: true
-//   }
+  {
+    useMongoClient: true
+  }
 );
 
 app.listen(PORT, function() {
