@@ -10,6 +10,7 @@ router
 // Matches with "/api/inkRequest/:id"
 router
   .route("/:id")
+  .get(inkRequestController.findById)
   .delete(inkRequestController.remove);
 
 module.exports = router;

@@ -19,21 +19,21 @@ export default {
         return axios.get("/api/inkRequest/" + id);
     },
 
-    getInkerSample: function (id) {
-        return axios.get("/api/inkerSample/" + id);
+    getInkerSample: function () {
+        return axios.get("/api/inkerSample");
     },
 
     // Gets all inker amples to post to inkerSample
-    getInkerSample: function (id) {
+    getInkerSampleById: function (id) {
         return axios.get("/api/inkerSample/" + id);
     },
 
     saveArtist: function(id) {
-        return axios.post("/api/inkerProfile", id);
+        return axios.post("/api/inkerProfile/", id);
     },
 
     saveSkins: function(id) {
-        return axios.post("/api/skinProfile", id);
+        return axios.post("/api/skinProfile/", id);
     },
 
     saveInkRequest: function(id) {

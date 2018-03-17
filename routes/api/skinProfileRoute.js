@@ -10,7 +10,6 @@ router.route("/")
 router
   .route("/:id")
   .get(skinProfileController.findById)
-  .put(skinProfileController.update)
   .delete(skinProfileController.remove);
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const inkerSampleController = require("../../controllers/inkerSampleController");
 
-// Matches with "/api/articles"
+// Matches with "/api/inksample"
 router.route("/")
   .get(inkerSampleController.findAll)
   .post(inkerSampleController.create);
@@ -10,7 +10,6 @@ router.route("/")
 router
   .route("/:id")
   .get(inkerSampleController.findById)
-  .put(inkerSampleController.update)
   .delete(inkerSampleController.remove);
 
 module.exports = router;

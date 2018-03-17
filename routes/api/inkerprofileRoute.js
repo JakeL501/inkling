@@ -10,7 +10,6 @@ router.route("/")
 router
   .route("/:id")
   .get(inkerProfileController.findById)
-  .put(inkerProfileController.update)
   .delete(inkerProfileController.remove);
 
 module.exports = router;
