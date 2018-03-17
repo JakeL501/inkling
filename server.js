@@ -5,11 +5,17 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
+//additional dependencies for Auth----
+var cookieParser = require('cookie-parser');
+var bodyParser   = require('body-parser');
+var session      = require('express-session');
+//-------------------------------------
+
 const PORT = process.env.PORT || 3001;
 
 //instagram
 const ig = require('instagram-node').instagram();
-var accessToken = '7229099483.1677ed0.8721a2a4706247f5a302ae9ed22e38bf'; 
+var accessToken = '7229099483.1677ed0.8721a2a4706247f5a302ae9ed22e38bf';
 
 //tag search 
 "https://api.instagram.com/v1/tags/search?q="//+hashTag+
@@ -25,6 +31,8 @@ app.use(bodyParser.json());
 app.use(express.static("client/build"));
 // Add routes, both API and view
 app.use(routes);
+
+app.use(cookieParser()); // read cookies (needed for auth)
  
 
 // INSTAGRAM API SERVER STUFF ---- prob API utils later
@@ -64,8 +72,30 @@ var redirectUri = 'http://localhost:3000/handleAuth';
 //         res.render('../views/pages/index.ejs', { instagram : result });
 //     });
    
+<<<<<<< HEAD
 // });
 ///-------------------------------
+=======
+});
+
+///------------------------------- user authentication
+//our models
+var model = require("./models")
+
+//passport - user authentication - local
+// required for passport
+require('./config/passport/passport')(passport, model.User); // pass passport for configuration
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+// routes ======================================================================
+require('./routes/api/authroute.js')(app, passport); // load our routes and pass in our app and fully configured passport
+
+//------------------------------------
+
+>>>>>>> 81fe6cb06845b3a514d2b3af07d884e09a39063f
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
