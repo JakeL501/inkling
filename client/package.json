@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.2",
+    "instagram-node": "^0.5.8",
     "node-instagram": "^4.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

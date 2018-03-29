@@ -80,14 +80,14 @@ var model = require("./models")
 
 //passport - user authentication - local
 // required for passport
-require('./config/passport/passport')(passport, model.User); // pass passport for configuration
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+// require('./config/passport/passport')(passport, model.User); // pass passport for configuration
+// app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
+// app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
-require('./routes/api/authroute.js')(app, passport); // load our routes and pass in our app and fully configured passport
+// require('./routes/api/authroute.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 //------------------------------------
 

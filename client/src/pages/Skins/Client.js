@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import api from "../../utils/api";
-import Panel from "../../components/Panel";
 import Jumbotron from "../../components/Jumbotron";
-import Navbar from "../../components/Navbar";
-// import { Input } from "client/src/components/Form";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";

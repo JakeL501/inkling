@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import api from "../../utils/api";
-import Panel from "../../components/Panel";
-import Footer from "../../components/Footer";
 import Jumbotron from "../../components/Jumbotron";
-import Navbar from "../../components/Navbar";
 
 import DeleteBtn from "../../components/DeleteBtn";
-import SaveBtn from "../../components/SaveBtn";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";

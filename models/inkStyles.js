@@ -1,5 +1,3 @@
-import inkStyles from "../client/src/pages/Styles";
-
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 

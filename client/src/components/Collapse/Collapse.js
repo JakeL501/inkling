@@ -7,7 +7,7 @@ const Collapse = () => (
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Be prepared.
+                         Be prepared.
                         </button>
                         </h5>
                 </div>
@@ -67,18 +67,25 @@ const Collapse = () => (
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                             <div class="card-body">
-                            <p>
-                                * Take into consideration that some designs fit better in certain places. For example, a larger tattoo with intricate details will require more space than is allowed on your wrist or along your ankle; whereas a small design just hanging out in the middle of your chest or back could look out of place, especially if it is your first tattoo.
-                            </p>
-                            <p>    
-                                * You also have to think about the lines of the tattoo and how they will fill the space. For example, if you choose a long piece of tribal designed for an armband, it might look a bit funny if you tattoo it down the side of your calf.
-                            </p>
-                            <p>
-                                * If you are looking at a smaller design like a rose or a heart, you might want to consider areas like your wrist, ankle, calf, bicep, or forearm, to name a few. However, if you are looking at a larger piece, you might want to choose a larger area with more exposed skin like the chest, shoulders, back, lower stomach or top of the thigh.
-                            </p>
-                            <p>
-                                * Another thing to consider when thinking about placement is: Will the area stretch? A butterfly or pistol might look exceptional on your lower stomach now, but if you gain or lose weight, it will affect the quality of the image. In some instances, they can get distorted. If you are worried about this aspect, your calf, shoulder blades, base of your spine, and forearms are great places to get a tat.
-                            </p>
+                            There are a few things to consider when thinking about getting some new skin art.
+                                <p>
+                                    What do you want?
+                                </p>
+                                <p>
+                                    Where do you want it?
+                                </p>
+                                <p>
+                                    How big/small?
+                                </p>
+                                <p>
+                                    How much you want to spend?
+                                </p>
+                                <p>
+                                How much time you want to spend each session?
+                                </p>
+                                <p>
+                                    Outline + Shading + Color
+                                </p>
                             </div>
                         </div> 
                     </div>

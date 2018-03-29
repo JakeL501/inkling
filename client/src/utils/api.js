@@ -3,53 +3,46 @@ import axios from "axios";
 export default {
 
 
-// Gets InkStyles
-    getInkStyles: function () {
-        return axios.get("/api/inkStyle");
-    },
-    // getInkStyle: function () {
-    //     return axios.get("/api/inkStyle" + id);
-    // },
-
-    // Saves a book to the database
-    saveInkling: function (inklingData) {
-        return axios.post("/api/", inklingData);
-    },
-
-    // Get INKER / Artist Profile
-    getArtist: function (id) {
-        return axios.get("/api/inkerProfile/" + id);
-    }
-
+// // Gets InkStyles
+       getArtist: function (id) {
+           return axios.get("/api/inkerProfile/" + id);
+       },
     
-    // getBooks: function () {
-    //     return axios.get("/api/books");
-    // },
-
-    // // Gets the book with the given id
-    // getBook: function (id) {
-    //     return axios.get("/api/books/" + id);
-    // },
-
-
-    // // Deletes the book with the given id
-    // deleteBook: function (id) {
-    //     return axios.delete("/api/books/" + id);
-    // },
-
-
-    // Saves a book to the database
-    // saveBook: function (bookData) {
-    //     return axios.post("/api/books", bookData);
-    // }
-
-        // Gets related inkSpire for inkStyle
-    // getInkSpireArticle: function (id) {
-    //     return axios.get("/api/InkSpireArticles/" + id);
-    // },
-
-    //  Gets the inkSpire with the given id
-    // getInkSpire: function (topic, begin, end) {
-    //     return axios.get("" + topic + "&begin_date=" + begin + "&end_date=" + end);
-    // },
+       getSkins: function (id) {
+           return axios.get("/api/skinProfile/" + id);
+       },
+    
+       getInkRequest: function (id) {
+           return axios.get("/api/inkRequest/" + id);
+       },
+    
+       // Gets all ink requests to populate inkRequest page
+       getInkRequest: function (id) {
+           return axios.get("/api/inkRequest/" + id);
+       },
+    
+       getInkerSample: function () {
+           return axios.get("/api/inkerSample");
+       },
+    
+       // Gets all inker amples to post to inkerSample
+       getInkerSampleById: function (id) {
+           return axios.get("/api/inkerSample/" + id);
+       },
+    
+       saveArtist: function(id) {
+           return axios.post("/api/inkerProfile/", id);
+       },
+    
+       saveSkins: function(id) {
+           return axios.post("/api/skinProfile/", id);
+       },
+    
+       saveInkRequest: function(id) {
+           return axios.post("/api/inkRequest", id);
+       },
+    
+       saveInkerSample: function(id) {
+           return axios.post("/api/inkerProfile", id);
+       }
 };
